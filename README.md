@@ -31,3 +31,7 @@ Run this to update DNS
 # 2. Run from docker
 
 @todo
+
+# Credit
+
+A similar implementation in NodeJS https://github.com/maccyber/auto-add-dns-domeneshop
