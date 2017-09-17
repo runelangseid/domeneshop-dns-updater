@@ -1,0 +1,9 @@
+# Requests
+requests>=2.7.0
+
+# YAML
+pyyaml>=3.11
+
+
+beautifulsoup4
+dnspython

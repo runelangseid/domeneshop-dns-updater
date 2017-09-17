@@ -1,0 +1,13 @@
+domeneshop:
+  login: https://www.domeneshop.no/login
+  admin: https://www.domeneshop.no/admin
+
+login: your@email.com
+password: password
+
+# list here the records you want to add/update
+record:
+  - name: Test domain
+    id: id_for_domain_7_digits
+    # example.com is not yet supported, only test.example.com
+    domain: test.example.com
