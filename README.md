@@ -30,7 +30,14 @@ Run this to update DNS
 ```
 # 2. Run from docker
 
-@todo
+Check domains every 10 minutes
+
+```sh
+cp config/domains.yml-DEFAULT config/domains.yml
+vi config/domains.yml
+docker run -it --name python -v path/to/your/config:/src/config runelangseid/domeneshop-dns-updater
+
+```
 
 # Credit
 

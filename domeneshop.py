@@ -11,8 +11,9 @@ def main():
     parser.add_argument('-v', '--verbose', help='Verbose', action='store_true')
 
     args = parser.parse_args()
+    config = args.config
 
-    object = Domeneshop(verbose=args.verbose)
+    object = Domeneshop(verbose=args.verbose, config=config)
     object.update_records()
 
 

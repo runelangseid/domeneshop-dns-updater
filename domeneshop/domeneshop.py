@@ -31,13 +31,16 @@ class Domeneshop(object):
 
     ip = ''
 
-    def __init__(self, config='config.yml', verbose=False):
+    def __init__(self, config=None, verbose=False):
         """
         Instance Domeneshop object
         """
 
         self.ip = self.get_ip()
         self.verbose = verbose
+
+        if config == None:
+            config = './config/domains.yml'
 
         with open(config) as f:
             self.config = yaml.load(f)
@@ -104,7 +107,7 @@ class Domeneshop(object):
                 if not login:
                     return False
         else:
-            print('No changed detected for %s' % record['domain'])
+            print('No IP change detected for %s' % record['domain'])
             return
 
         url = '%s?edit=dns&id=%s' % (self.config['domeneshop']['admin'], record['id'])

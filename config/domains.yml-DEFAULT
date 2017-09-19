@@ -1,6 +1,6 @@
 domeneshop:
-  login: https://www.domeneshop.no/login
-  admin: https://www.domeneshop.no/admin
+  login: https://www.domene.shop/login
+  admin: https://www.domene.shop/admin
 
 login: your@email.com
 password: password
