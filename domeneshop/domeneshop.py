@@ -63,7 +63,8 @@ class Domeneshop(object):
         );
 
         # Check if login was successful
-        soup = BeautifulSoup(response.text)
+        soup = BeautifulSoup(response.text, 'html.parser')
+
         logout = soup.findAll('a', href=re.compile('^http.*/logout'))
         if not logout:
             if self.verbose:
@@ -193,7 +194,10 @@ class Domeneshop(object):
 
     @staticmethod
     def _get_form(response, record):
-        soup = BeautifulSoup(response.text)
+        # Fix errors in html
+        html = response.text.replace('</td>\n</td>', '</td>')
+
+        soup = BeautifulSoup(html, 'html.parser')
         forms = soup.findAll('form')
 
         for form in forms:
